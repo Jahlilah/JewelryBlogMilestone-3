@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Homepage with abstract, key terms, and table of contents linking to other pages." />
+  <title>Home · KMD Jewelry Blog</title>
+  <!-- Google Fonts (ok for class demos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+  <!-- Single CSS file, required by rubric -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- 
+    Documentation: This site was built for IT 3203 Milestone #1.
+    - Consistent main menu appears on every page.
+    - Proper HTML semantics: header, nav, main, section, article, footer.
+    - Headings, lists, images, and a table included.
+    - CSS uses element, class, id, attribute selectors + :hover, :focus.
+    - Layout via CSS Grid and Flexbox.
+    - Link hover effects, paddings, margins, borders, colors, and custom fonts applied.
+    - Validate each HTML page on https://validator.w3.org/nu/
+  -->
+</head>
+<body>
+  
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <img src="assets/kmd-logo.svg" alt="KMD Jewelry Blog Logo" width="28" height="28"/>
+    <span>KMD Jewelry Blog</span>
+  </a>
+  <nav aria-label="Main"><ul class="nav"><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="topic-design.html">Design & Craft</a></li><li><a href="concepts.html">Key Concepts</a></li><li><a href="references.html">References</a></li><li><a href="about.html">About</a></li></ul></nav>
+</header>
+
+  <main id="content">
+    
+
+<section class="hero">
+  <div class="hero-text">
+    <h1><span class="eyebrow">Milestone 1</span> Nature‑inspired jewelry, simply explained</h1>
+    <p class="lede">Nature‑inspired jewelry — a luxury, eco‑conscious jewelry brand committed to celebrating the beauty of nature. Each piece is crafted with reclaimed gold, recycled diamonds, and respect for the environment — combining elegance with responsibility.</p>
+    <a class="btn" href="concepts.html">See Concepts</a>
+  </div>
+  <figure class="hero-media">
+    <img src="assets/hand-blue-ring-skull.jpg" alt="Hand wearing a blue gemstone ring holding a glass skull" />
+    <figcaption>Project photo used as a simple hero image.</figcaption>
+  </figure>
+</section>
+
+
+
+<section class="toc grid">
+  <article class="card">
+    <h2>Table of Contents</h2>
+    <ol class="toc-list">
+      <li><a href="products.html">Products</a></li>
+      <li><a href="topic-design.html">Design &amp; Craft</a></li>
+      <li><a href="concepts.html">Key Concepts</a></li>
+      <li><a href="references.html">References</a></li>
+      <li><a href="about.html">About</a></li>
+    </ol>
+  </article>
+  <article class="card">
+    <h2>Key Terms (short)</h2>
+    <ul>
+      <li><strong>Reclaimed Gold</strong> – refined and reused gold.</li>
+      <li><strong>Traceability</strong> – track source to finished piece.</li>
+      <li><strong>Benchwork</strong> – hands‑on making at the jeweler’s bench.</li>
+      <li><strong>Patina</strong> – intentional surface finish.</li>
+    </ul>
+  </article>
+  <article class="card">
+    <h2>Mini Compare</h2>
+    <table class="compare">
+      <thead><tr><th>Material</th><th>Why use it</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Reclaimed Gold</th><td>Less new mining</td></tr>
+        <tr><th scope="row">Recycled Diamonds</th><td>Gives existing stones new life</td></tr>
+      </tbody>
+    </table>
+  </article>
+</section>
+
+
+  </main>
+  
+<footer class="site-footer">
+  <p>&copy; 2025 Jaleelah Bachou · #ilikerocks</p>
+</footer>
+
+  <a class="skip-to-top" href="#content" aria-label="Skip to top">↑</a>
+</body>
+</html>
