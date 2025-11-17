@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eco-Luxe Jewelry Quiz | Jewelry Blog</title>
+  <!-- one shared stylesheet for the whole site -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Jewelry Blog</a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="key-concepts.html">Key Concepts</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About</a>
+      <a class="active" href="quiz.html" aria-current="page">Quiz</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Self-Assessment: Nature-Inspired, Eco-Conscious Jewelry</h1>
+    <p class="lead">
+      Test your understanding of luxury, eco-conscious jewelry after reading the site.
+      You’ll see your score and detailed feedback right away.
+    </p>
+
+    <form id="quizForm" class="quiz" novalidate>
+      <!-- Q1: Fill in the blank -->
+      <section class="q-block" data-points="10">
+        <h2>1) Fill in the blank (10 pts)</h2>
+        <p>
+          This brand focuses on <em>luxury, eco-conscious jewelry</em> crafted with
+          <strong>reclaimed ______</strong> and <strong>recycled diamonds</strong>.
+        </p>
+        <label class="visually-hidden" for="q1">Type one word</label>
+        <input id="q1" name="q1" type="text" placeholder="your answer" required />
+        <output class="feedback" id="f1" aria-live="polite"></output>
+      </section>
+
+      <!-- Q2: Single choice -->
+      <section class="q-block" data-points="10">
+        <h2>2) Multiple choice – one correct (10 pts)</h2>
+        <p>Which term best describes the design ethos of this jewelry line?</p>
+        <label class="opt"><input type="radio" name="q2" value="a" required /> Maximalist streetwear</label>
+        <label class="opt"><input type="radio" name="q2" value="b" /> Nature-inspired minimal luxury</label>
+        <label class="opt"><input type="radio" name="q2" value="c" /> Retro goth</label>
+        <label class="opt"><input type="radio" name="q2" value="d" /> Industrial techwear</label>
+        <output class="feedback" id="f2" aria-live="polite"></output>
+      </section>
+
+      <!-- Q3: Single choice -->
+      <section class="q-block" data-points="10">
+        <h2>3) Multiple choice – one correct (10 pts)</h2>
+        <p>Which practice reduces environmental impact the most for fine jewelry?</p>
+        <label class="opt"><input type="radio" name="q3" value="a" required /> Extra gift packaging</label>
+        <label class="opt"><input type="radio" name="q3" value="b" /> Using reclaimed metals and recycled stones</label>
+        <label class="opt"><input type="radio" name="q3" value="c" /> Overnight shipping</label>
+        <label class="opt"><input type="radio" name="q3" value="d" /> Seasonal color drops</label>
+        <output class="feedback" id="f3" aria-live="polite"></output>
+      </section>
+
+      <!-- Q4: Single choice -->
+      <section class="q-block" data-points="10">
+        <h2>4) Multiple choice – one correct (10 pts)</h2>
+        <p>“Reclaimed gold” most accurately means:</p>
+        <label class="opt"><input type="radio" name="q4" value="a" required /> Newly mined gold</label>
+        <label class="opt"><input type="radio" name="q4" value="b" /> Gold refined from previously used sources</label>
+        <label class="opt"><input type="radio" name="q4" value="c" /> Gold-colored plastic</label>
+        <label class="opt"><input type="radio" name="q4" value="d" /> 24k only</label>
+        <output class="feedback" id="f4" aria-live="polite"></output>
+      </section>
+
+      <!-- Q5: Multi-select -->
+      <section class="q-block" data-points="20">
+        <h2>5) Multi-select – choose all that apply (20 pts)</h2>
+        <p>Which of the following align with an eco-conscious luxury jewelry brand?</p>
+        <label class="opt"><input type="checkbox" name="q5" value="a" /> Recycled diamonds</label>
+        <label class="opt"><input type="checkbox" name="q5" value="b" /> Reclaimed precious metals</label>
+        <label class="opt"><input type="checkbox" name="q5" value="c" /> Single-use plastic showcases</label>
+        <label class="opt"><input type="checkbox" name="q5" value="d" /> Transparent sourcing & craftsmanship</label>
+        <label class="opt"><input type="checkbox" name="q5" value="e" /> Disposability as a brand value</label>
+        <output class="feedback" id="f5" aria-live="polite"></output>
+      </section>
+
+      <div class="quiz-actions">
+        <button type="submit" class="btn primary">Submit Quiz</button>
+        <button type="reset" id="resetBtn" class="btn">Reset</button>
+      </div>
+
+      <section id="results" class="results" hidden aria-live="polite">
+        <h2>Your Results</h2>
+        <p id="overall"></p>
+        <p><strong>Total Score:</strong> <span id="totalScore">0</span> / 60</p>
+        <ul id="breakdown" class="breakdown"></ul>
+      </section>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; 2025 Jewelry Blog — nature-inspired, eco-conscious luxury.</small>
+  </footer>
+
+  <script src="quiz.js" defer></script>
+</body>
+</html>
