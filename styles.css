@@ -1,11 +1,4 @@
 
-/* ===================================================================
-   KMD Jewelry Blog — Single CSS file for the whole site
-   - Demonstrates element, class, id, attribute selectors
-   - Uses CSS Grid and Flexbox
-   - Applies hover effects, padding/margins, borders, colors, font settings
-   =================================================================== */
-
 :root {
   --bg: #0c0c0f;
   --panel: #13131a;
@@ -37,10 +30,9 @@ h1 { font-size: clamp(2rem, 3.4vw, 3rem); }
 h2 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 h3 { font-size: 1.125rem; }
 
-/* Element selectors */
+
 header, main, footer { display: block; }
 
-/* Attribute selector demo: external links open in a new tab */
 a[target="_blank"]::after {
   content: " ↗";
   font-size: .9em;
@@ -67,7 +59,6 @@ img {
   border: 1px solid #262636;
 }
 
-/* Header + Nav */
 .site-header {
   position: sticky;
   top: 0;
@@ -112,14 +103,12 @@ img {
   transform: translateY(-1px);
 }
 
-/* Main layout */
 #content {
   margin-inline: auto;
   padding: 1.2rem;
   max-width: 1100px;
 }
 
-/* Cards + panels */
 .card {
   background: var(--panel);
   border: 1px solid #242434;
@@ -128,7 +117,7 @@ img {
   box-shadow: 0 10px 28px rgba(0,0,0,.25);
 }
 
-/* Hero grid (Grid requirement) */
+
 .hero {
   display: grid;
   grid-template-columns: 1.2fr .8fr;
@@ -173,7 +162,7 @@ img {
   margin-top: .4rem;
 }
 
-/* Grid utility */
+
 .grid {
   display: grid;
   gap: 1rem;
@@ -187,7 +176,6 @@ img {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* Flex (Flex requirement) */
 .flex {
   display: flex;
   gap: 1rem;
@@ -202,7 +190,6 @@ img {
   padding: .8rem;
 }
 
-/* Tables */
 table.compare {
   width: 100%;
   border-collapse: collapse;
@@ -219,7 +206,6 @@ table.compare {
   border-bottom: 2px solid #3b3b57;
 }
 
-/* Definition list for concepts */
 dl.concepts {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -235,7 +221,7 @@ dl.concepts dd {
   color: var(--muted);
 }
 
-/* Footer */
+
 .site-footer {
   margin-top: 2rem;
   padding: 1rem;
@@ -243,28 +229,21 @@ dl.concepts dd {
   color: var(--muted);
 }
 
-/* ID selector demo */
 #highlight {
   border-left: 4px solid var(--ring);
   padding-left: .6rem;
 }
 
-/* Class selector demo is used everywhere (e.g., .card, .grid, .flex) */
-
-/* Hover effects for links shown above; also style attribute selector example */
 a[href^="http"] {
-  /* subtle hint for external links (attribute selector) */
   filter: saturate(105%);
 }
 
-/* Spacing and borders (padding/margins already demonstrated above) */
 .prose > section {
   margin-bottom: 1rem;
   padding-bottom: .8rem;
   border-bottom: 1px dashed #26263a;
 }
 
-/* Skip to top helper */
 .skip-to-top {
   position: fixed;
   right: 1rem;
@@ -278,11 +257,83 @@ a[href^="http"] {
 }
 .skip-to-top:hover { opacity: 1; }
 
-/* Responsive adjustments */
+
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
   .toc.grid { grid-template-columns: 1fr; }
   .grid.two { grid-template-columns: 1fr; }
 }
 
-/* End of styles.css */
+@media (max-width: 600px) {
+
+  .site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-inline: 1rem;
+  }
+
+  .site-header .brand {
+    font-size: 0.95rem;
+  }
+
+  .site-header .nav,
+  .site-header .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+    column-gap: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .site-header .nav li {
+    list-style: none;
+  }
+
+  .site-header .main-nav a,
+  .site-header .nav a {
+    display: inline-block;
+    padding: 0.25rem 0.4rem;
+  }
+
+  #content,
+  main {
+    padding-inline: 1rem;
+  }
+
+  .card,
+  .quiz-card,
+  .hero,
+  .toc {
+    margin-inline: 0;
+  }
+
+  table,
+  .compare {
+    font-size: 0.9rem;
+  }
+
+  table th,
+  table td {
+    padding: 0.4rem 0.45rem;
+  }
+
+  .q-block h2 {
+    font-size: 1.05rem;
+  }
+
+  .q-block p {
+    font-size: 0.95rem;
+  }
+
+  .opt {
+    font-size: 0.95rem;
+  }
+
+  #score-block,
+  .results {
+    padding: 0.75rem 1rem;
+  }
+}
+
