@@ -1,3 +1,4 @@
+// Self-invoking function to ensure code does not pollute global scope
 (function () {
   const form = document.getElementById('quizForm');
   const resultsBox = document.getElementById('results');
@@ -5,8 +6,8 @@
   const totalScoreEl = document.getElementById('totalScore');
   const breakdown = document.getElementById('breakdown');
   const resetBtn = document.getElementById('resetBtn');
-
- 
+  
+ // Answer key with points for each question
   const key = {
     q1: { type: 'text', answer: 'gold', points: 10 },
     q2: { type: 'single', answer: 'b', points: 10 },
@@ -18,7 +19,7 @@
   function normalizeText(s) {
     return (s || '').trim().toLowerCase();
   }
-
+// Main grading function
   function grade() {
     let total = 0;
     const perQuestion = [];
