@@ -273,6 +273,60 @@ a[href^="http"] {
   .grid.two { grid-template-columns: 1fr; }
 }
 
+@media (max-width: 600px) {
+  .site-header {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-inline: 1rem;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+    column-gap: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .nav a {
+    display: inline-block;
+    padding: 0.25rem 0.4rem;
+  }
+  #content,
+  main {
+    padding-inline: 1rem;
+  }
+
+  .hero,
+  .grid.two,
+  .card {
+    margin-inline: 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+
+  th,
+  td {
+    padding: 0.35rem 0.4rem;
+  }
+
+  
+  .quiz {
+    padding: 1rem;
+  }
+
+  .q-block h2 {
+    font-size: 1rem;
+  }
+
+  .opt {
+    font-size: 0.95rem;
+  }
+}
+
 :root {
   --bg: #0e0f13;
   --card: #161821;
