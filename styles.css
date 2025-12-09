@@ -12,7 +12,10 @@
 }
 
 * { box-sizing: border-box; }
-
+/* ============================
+   GLOBAL STYLES — applied on all pages
+   Ensures consistent brand appearance
+   ============================ */
 html, body {
   margin: 0;
   padding: 0;
