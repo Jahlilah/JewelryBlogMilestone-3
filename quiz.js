@@ -1,4 +1,3 @@
-<li><a href="quiz.html">Quiz</a></li>
 (function () {
   const form = document.getElementById('quizForm');
   const resultsBox = document.getElementById('results');
